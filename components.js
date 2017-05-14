@@ -60,6 +60,17 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null),
+      }],
+      xIsNext: true,
+    };
+  }
+
   render() {
     return (
       <div className="game">
